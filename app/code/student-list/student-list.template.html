@@ -1,9 +1,13 @@
-<div class="col-md-2">
-    <p>Search: <input ng-model="$ctrl.query" /></p>
-</div>
-<div class="col-md-10">
-    <ul><li ng-repeat="student in $ctrl.studentList | filter: $ctrl.query">
-        <span>{{student.name}}</span>
-        <p>{{student.dob}}</p>
-    </li></ul>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <p>Search: <input ng-model="$ctrl.query" /></p>
+        </div>
+        <div class="col-md-10">
+            <ul><li ng-repeat="student in $ctrl.studentList | filter: $ctrl.query">
+                <span>{{student.name}}</span>
+                <p>{{student.dob}}</p>
+            </li></ul>
+        </div>
+    </div>
 </div>
