@@ -1,10 +1,14 @@
-describe('mySchoolController', function() {
-    beforeEach(module("mySchoolApp"));
+describe('My School App Test', function() {
+    beforeEach(module("studentList"));
 
-    it("number of students should be 2", inject(function($controller) {
-        var scope = {};
-        var ctrl = $controller('mySchoolCtrl', {$scope: scope});
-    
-        expect(scope.students.length).toBe(2);    
-    }));
+    describe('test the student list controller', function() {
+        var ctrl;
+        beforeEach(inject(function($componentController) {
+            ctrl = $componentController('studentList');
+        }));
+
+        it('Total list count must be 3', function() {
+            expect(ctrl.studentList.length).toBe(3);
+        })
+    });
 });
